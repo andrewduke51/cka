@@ -1,0 +1,27 @@
+# Docker commands
+build image: docker build -t flask_test_container :latest .
+docker run -d -p 5000:5000 flask_test_container :latest
+
+kubectl run nginx --image nginx
+kubectl get pods
+
+kubectl create -f pod-definition.yml
+kubectl describe pod myapp-pod
+kubectl edit pod redis
+
+Kubectl create -f replicationset-definition.yml
+Kubectl get replicaset
+Kubectl get replicaset <name>
+kubectl edit replicaset new-replica-set
+
+Kubectl replace -f replicationset-definition.yml
+Kubectl scale --replica=6 -f replicationset-definition.yml
+Kubectl scale --replica=6 -f replicationset myreplicaset
+
+
+ApiVersion
+kind
+metadata
+spec
+
+

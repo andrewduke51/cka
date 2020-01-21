@@ -1,0 +1,15 @@
+ApiVersion: v1
+
+kind: pod
+
+metadata:
+  name: myapp
+  labels:
+    app: myapp
+    cistcenter: US
+
+
+spec:
+   containers:
+     name: ngiunx containers
+     image: nginx
