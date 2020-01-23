@@ -48,3 +48,9 @@ kubectl apply -f <name>.yml
 create deployment httpd-frontend --image=httpd:2.4-alpine --dry-run=false -o yaml
 kubectl edit deployment httpd-frontend
 
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+## Namespace
+kubectl get pods --namespace=kube-system
+kubectl create pod -f pod-definition.yaml --namespace=dev
+OR use Example move to pod definition yaml file
+## pod-definition.yaml
+ApiVersion: v1
+kind: Pod
+
+metadata:
+  name: myapp-pod
+  namespace: dev
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+
+## Create namespace command: kubectl create -f namespace-dev.yaml
+## or kubectl create namespace dev
+namespace-dev.yaml
+apiVersion: v1
+kind: Namspace
+metadata:
+  name: dev
+
+permanently set new default namespace command
+## kubectl config set-context $(kubectl config current-context) --namespace=dev
+kubectl get pods --all-namesaces
+
+kubectl create -f compute-quota.yaml
