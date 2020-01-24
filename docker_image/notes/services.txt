@@ -1,0 +1,4 @@
+service types   (front tier)
+    NodePort
+    CLusterIP
+    LoadBalancer

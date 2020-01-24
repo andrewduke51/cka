@@ -1,5 +1,7 @@
 ## Namespace
+kubectl get namespaces
 kubectl get pods --namespace=kube-system
+kubectl create deployment --image=httpd httpd --dry-run -o yaml > httpd-deployment.yaml
 kubectl create pod -f pod-definition.yaml --namespace=dev
 OR use Example move to pod definition yaml file
 ## pod-definition.yaml
@@ -30,3 +32,6 @@ permanently set new default namespace command
 kubectl get pods --all-namesaces
 
 kubectl create -f compute-quota.yaml
+
+DNS in kubernetes
+my-svc.my-namespace.svc.cluster.local
