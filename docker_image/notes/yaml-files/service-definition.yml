@@ -32,3 +32,27 @@ spec:
 # curl http://10.0.0.2:30008
 # curl http://10.0.0.3:30008
 # without any additional steps or configuration changes
+
+
+
+# this one had me
+# command for it:
+  kubectl expose deployment webapp --type=NodePort --port=8080 --name=webapp-service --dry-run -o yaml > webapp-service.yml
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: webapp
+  name: webapp-service
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+    nodePort: 30082
+  selector:
+    app: webapp
+  type: NodePort
+status:
+  loadBalancer: {}
