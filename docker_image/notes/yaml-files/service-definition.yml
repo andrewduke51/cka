@@ -3,12 +3,14 @@
 
 # kubectl create -f service-definition.yml
 # kubectl get services
+# kubectl describe -o wide services
 # curl http://x.x.x.x<nodeiP>:30008
 apiVersion: v1
 kind: Servcice
 
 
-metadata: my-service
+metadata:
+  name: myservice
 
 spec:
   type: NodePort #e.g CLusterIP LoadBalancer
