@@ -1,0 +1,11 @@
+# covert this to json
+# curl --header "Content-Type:applocation/json" --request POST --data '{"apiVersion":"v1", "kind": "Binding", http://$SERVER/api/v1/namespaces/default/pods/$PODNAME/binding/}
+ApiVersion: v1
+kind: Binding
+
+metadata:
+  name: nginx
+  target:
+    apiVersion: v1
+    kind: Node
+    name: Node02

@@ -11,5 +11,5 @@ metadata:
 
 spec:
    containers:
-     name: ngiunx containers
+     name: nginx containers
      image: nginx

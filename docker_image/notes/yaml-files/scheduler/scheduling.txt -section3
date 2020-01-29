@@ -1,0 +1,3 @@
+Check for various kubernetes control plane components
+
+kubectl get pods --namespace kube-system
