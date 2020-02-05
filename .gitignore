@@ -2,3 +2,7 @@ kube-config.txt
 kube-config
 .idea/
 temp/
+temp.txt
+Vagrantfile
+script/
+.vagrant/
